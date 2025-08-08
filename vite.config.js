@@ -7,5 +7,10 @@ export default defineConfig({
   server: {
     host: '0.0.0.0', // ✅ crucial for Render
     port: 3000       // optional, but good to specify
+  },
+    preview: {
+    host: '0.0.0.0',
+    port: 3000,
+    allowedHosts: ['kishan-kumar-portfolio.onrender.com']  // ✅ Add your domain here
   }
 })
