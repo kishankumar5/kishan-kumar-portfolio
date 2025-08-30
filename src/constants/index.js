@@ -36,11 +36,12 @@ import {
     {
       id: "work",
       title: "Work",
-    },
-    {
-      id: "contact",
-      title: "Contact",
-    },
+    }
+    // ,
+    // {
+    //   id: "contact",
+    //   title: "Contact",
+    // },
   ];
   
   const services = [
@@ -135,17 +136,18 @@ import {
       iconBg: "#E6DEDD",
       date: "August 2022 - September 2023",
       points: [
-        "Led a Proof of Concept (POC) for a metaverse-based banking application, incorporating Web 3.0, and utilizing Babylon.js for 3D rendering in web and Blender, to create the virtual environment.",
+        // "Led a Proof of Concept (POC) for a metaverse-based banking application, incorporating Web 3.0, and utilizing Babylon.js for 3D rendering in web and Blender, to create the virtual environment.",
+        "Led a Proof of Concept (POC) for a VR-based banking application, showcasing immersive financial services. Built the virtual environment in Blender and implemented interactive 3D experiences using Babylon.js (WebXR)",
         "This POC enables user to perform basic banking operations i.e. money transfer, view account details, and avail loans, all inside a virtual environment.",
         "Demonstrated the potential of immersive banking experiences, which could increase the client’s interest in adopting virtual banking solutions."
       ],
     },
     {
-      title: "System Trainee (Software Developer)",
+      title: "System Engineer (Software Developer)",
       company_name: "Intellect Design Arena, Chennai",
       icon: intellect,
       iconBg: "#E6DEDD",
-      date: "September 2023 - May 2025",
+      date: "September 2023 - June 2025",
       points: [
         "Worked on an experimental AI module which speeds up the process of developing enterprise level web applications, and elevates the user’s experience to develop the UI, within a few clicks away.",
         "Used Claude 3.5 Sonnet AI through Amazon Bedrock to generate custom HTML templates according to the user’s needs and modifications, and later converted it to our low-code products meta data for processing it further.",
