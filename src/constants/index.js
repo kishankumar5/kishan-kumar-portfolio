@@ -149,8 +149,10 @@ import {
       iconBg: "#E6DEDD",
       date: "September 2023 - June 2025",
       points: [
-        "Worked on an experimental AI module which speeds up the process of developing enterprise level web applications, and elevates the user’s experience to develop the UI, within a few clicks away.",
-        "Used Claude 3.5 Sonnet AI through Amazon Bedrock to generate custom HTML templates according to the user’s needs and modifications, and later converted it to our low-code products meta data for processing it further.",
+        "Built an AI-powered Chatbot that generates UI components, templates, metadata, DB connections, and images using Claude 3.5 Sonnet, Amazon Nova/Titan, and Meta AI—connected via a Node.js/Express middleware service.",
+        "This service acted as a bridge between the Canvas app server and Amazon Bedrock, routing requests to the right models, managing image generation & storage, and executing DDL/DML scripts for automated business data creation/inserts—reducing app configuration time by ~50%",
+        // "Worked on an experimental AI module which speeds up the process of developing enterprise level web applications, and elevates the user’s experience to develop the UI, within a few clicks away.",
+        // "Used Claude 3.5 Sonnet AI through Amazon Bedrock to generate custom HTML templates according to the user’s needs and modifications, and later converted it to our low-code products meta data for processing it further.",
         "Developed a low-code platform module, allowing users to create dynamic and reusable content for both web and mobile apps without writing code, by leveraging HTML, CSS, JavaScript, and JQuery.",
         "Improved design efficiency for users by 30%, facilitating template adaptation for future technologies through generic data storage"
       ],
