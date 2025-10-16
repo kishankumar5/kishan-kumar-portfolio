@@ -32,7 +32,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a software developer with a BSc in Computer Science from Loyola College and 2.5 years of experience in front-end development and AI-driven low-code platforms. I've built innovative projects like a metaverse banking app and dynamic content modules. Now, I’m pursuing my MSCS at Northeastern University (Fall 2025), focusing on AI, XR, and immersive tech.
+        I'm a software developer with a BSc in Computer Science from Loyola College and 3 years of experience in front-end development and AI-driven low-code platforms. I've built innovative projects like a metaverse banking app and dynamic content modules. Now, I’m pursuing my MSCS at Northeastern University (Fall 2025), focusing on AI, XR, and immersive tech.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service,index)=>(
