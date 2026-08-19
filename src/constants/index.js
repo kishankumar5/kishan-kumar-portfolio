@@ -37,12 +37,37 @@ import {
     {
       id: "projects",
       title: "Projects",
-    }
-    // ,
-    // {
-    //   id: "contact",
-    //   title: "Contact",
-    // },
+    },
+    {
+      id: "contact",
+      title: "Contact",
+    },
+  ];
+
+  // Résumé lives in public/, so it is served from the site root as-is rather
+  // than being hashed into the bundle. Replacing the file is enough to update
+  // the download; the link does not change.
+  export const resumeUrl = "/Kishan-Kumar-Resume.pdf";
+
+  export const contacts = [
+    {
+      label: "Email",
+      value: "kishan.kumar.sa.05@gmail.com",
+      href: "mailto:kishan.kumar.sa.05@gmail.com",
+      icon: "mail",
+    },
+    {
+      label: "LinkedIn",
+      value: "kishan-kumar-selvakumar-anandraj",
+      href: "https://www.linkedin.com/in/kishan-kumar-selvakumar-anandraj/",
+      icon: "linkedin",
+    },
+    {
+      label: "GitHub",
+      value: "kishankumar5",
+      href: "https://github.com/kishankumar5",
+      icon: "github",
+    },
   ];
   
   const services = [

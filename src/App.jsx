@@ -14,11 +14,13 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
-        {/* <Feedbacks />
+        {/* <Feedbacks /> */}
         <div className='relative z-0'>
           <Contact />
-          <StarsCanvas />
-        </div> */}
+          {/* StarsCanvas is still an unimplemented stub that renders the
+              literal text "Stars"; re-enable once it draws a starfield. */}
+          {/* <StarsCanvas /> */}
+        </div>
       </div>
     </BrowserRouter>
   );
