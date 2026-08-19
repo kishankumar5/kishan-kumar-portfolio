@@ -29,9 +29,6 @@ import tesla from "./company/tesla.png";
 import logic from "./company/logic.svg";
 import intellect from "./company/intellect.svg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 
 export {
   dev3d,
@@ -62,7 +59,4 @@ export {
   logic,
   intellect,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
 };

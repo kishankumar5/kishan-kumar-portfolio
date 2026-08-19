@@ -22,9 +22,6 @@ import {
     logic,
     intellect,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
     threejs,
   } from "../assets";
   
@@ -36,6 +33,10 @@ import {
     {
       id: "work",
       title: "Work",
+    },
+    {
+      id: "projects",
+      title: "Projects",
     }
     // ,
     // {
@@ -46,20 +47,20 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
-      icon: web,
-    },
-    {
-      title: "3D Web Developer",
-      icon: dev3d,
-    },
-    {
-      title: "Backend Developer",
+      title: "AI & ML Developer",
       icon: backend,
     },
     {
-      title: "Content Creator",
-      icon: creator,
+      title: "Full-Stack Developer",
+      icon: web,
+    },
+    {
+      title: "Mobile Developer",
+      icon: mobile,
+    },
+    {
+      title: "3D & XR Developer",
+      icon: dev3d,
     },
   ];
   
@@ -105,17 +106,21 @@ import {
     //   icon: threejs,
     // },
     // {
-    //   name: "git",
-    //   icon: git,
+    //   name: "figma",
+    //   icon: figma,
     // },
     {
-      name: "figma",
-      icon: figma,
+      name: "git",
+      icon: git,
     },
-    // {
-    //   name: "docker",
-    //   icon: docker,
-    // },
+    {
+      name: "docker",
+      icon: docker,
+    },
+    // No icon assets yet for: Python, PyTorch, React Native / Expo,
+    // PostgreSQL, Express, Java, jQuery, Babylon.js, Streamlit, Blender.
+    // Drop a PNG/SVG in src/assets/tech, export it from src/assets/index.js,
+    // and add an entry here to surface them.
   ];
   
   const experiences = [
@@ -186,69 +191,125 @@ import {
     },
   ];
   
+  // Preview images are picked up automatically: drop a file named after a
+  // project's `slug` into src/assets/projects (e.g. chiptable.png) and it
+  // replaces that card's gradient placeholder on the next build. No code
+  // change needed. See src/assets/projects/README.md.
+  //
+  // `source_code_link` and `live_demo_link` are optional — each link button is
+  // hidden when its URL is absent.
   const projects = [
     {
-      name: "Car Rent",
+      name: "ReuseDepot — iPad Kiosk App",
+      date: "August 2026",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Self-service kiosk app built for Northeastern University's Reuse Depot, letting visitors log the items they take without a coordinator present. Visitors tap item categories, enter their name and email, and submit on their own, while coordinators receive donations and monitor per-category inventory from the same app — everything logging to Supabase in real time. Runs in two modes: Drive Mode for move-out donation collection and Depot Mode for the year-round kiosk, on an iPad-optimized layout supporting both portrait and landscape. Idle detection auto-resets the session between visitors, and the standby screen cycles live sustainability facts and semester-wide impact stats. Built with React Native, Expo, and TypeScript with audio and haptic feedback, shipped through EAS Build, and iterated in place while in active use at the depot.",
       tags: [
         {
-          name: "react",
+          name: "react-native",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "expo",
           color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
         },
         {
           name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      slug: "reusedepot",
+      source_code_link: "",
+    },
+    {
+      name: "ChipTable",
+      date: "August 2026",
+      description:
+        "Real-time poker chip manager that replaces physical chips for home games — stacks and betting, automatic blinds and dealer button, side pots with per-pot eligibility, single-tap showdown payouts with an objection window, cash-game settlement that always sums to zero, and tournament blind levels on a timer. The poker rules live in one TypeScript engine run on both sides: the browser executes it for instant optimistic UI while the server runs identical code as the authority, so the client can never talk the server into a different result. Players join through a six-character room code with no account or download, and Supabase Realtime pushes every state change to the room channel — reconnection restores your seat and stack across refreshes, lock screens, and dropped wifi. Roughly 6,300 lines with 51 engine tests, hand-rolled without a component, state, or router library to stay at 68 kB gzipped.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "typescript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "supabase",
+          color: "pink-text-gradient",
+        },
+      ],
+      slug: "chiptable",
+      source_code_link: "https://github.com/kishankumar5/chiptable",
+      live_demo_link: "https://kishankumar5.github.io/chiptable/",
+    },
+    {
+      name: "Multimodal Fashion Outfit Recommendation",
+      date: "January 2026 - April 2026",
+      description:
+        "Multimodal outfit recommendation system pairing EfficientNet-B0 image embeddings with Sentence-BERT text embeddings in a shared 256-d space, reaching 0.7767 AUC and 70.14% accuracy on 40,000 stylist-curated Polyvore outfits. Ran 10 systematic experiments tuning data scaling, learning rate, backbone freezing, dropout, and negative sampling — identifying data volume as the strongest performance lever (+3.9% AUC). Ships as a Streamlit app serving real-time recommendations over 10,000+ catalog embeddings via cosine similarity, with mobile camera scanning, text search, and pairwise compatibility scoring.",
+      tags: [
+        {
+          name: "pytorch",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "multimodal-ml",
+          color: "green-text-gradient",
+        },
+        {
+          name: "streamlit",
+          color: "pink-text-gradient",
+        },
+      ],
+      slug: "fashion",
+      source_code_link: "https://github.com/kishankumar5/Fashion-Outfit-Recommendation",
+    },
+    {
+      name: "Realtor — Real Estate Mobile App",
+      date: "December 2025 - Present",
+      description:
+        "Cross-platform real estate application built with React Native and Expo, featuring secure JWT authentication with an access/refresh token flow and encrypted credential storage via Expo SecureStore. Backed by a self-hosted GoTrue auth service (Supabase's open-source auth) containerized with Docker and PostgreSQL, enabling registration, login, and automatic token refresh with no third-party dependency. React Context drives global state behind a protected AuthStack/AppStack routing architecture, persisting sessions across app restarts and logging out automatically on token expiration.",
+      tags: [
+        {
+          name: "react-native",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "gotrue",
+          color: "green-text-gradient",
+        },
+        {
+          name: "postgresql",
+          color: "pink-text-gradient",
+        },
+      ],
+      slug: "realtor",
+      source_code_link: "https://github.com/kishankumar5/realtor-app",
+    },
+    {
+      name: "Flight Route Optimizer",
+      date: "October 2025 - December 2025",
+      description:
+        "Graph-based flight route optimization system that finds optimal routes across major US airports by minimum cost or minimum duration using Dijkstra's shortest path algorithm. Built in Python with a min-heap priority queue and graph traversal (Dijkstra's, BFS, DFS), with flight data stored as JSON and converted into directed weighted graphs for pathfinding, surfaced through a Streamlit UI for interactive route visualization.",
+      tags: [
+        {
+          name: "python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "algorithms",
+          color: "green-text-gradient",
+        },
+        {
+          name: "streamlit",
+          color: "pink-text-gradient",
+        },
+      ],
+      slug: "flight",
+      source_code_link: "https://github.com/kishankumar5/Flight-Route-Optimizer",
+      live_demo_link: "https://flight-route-optimizer-kk.streamlit.app/",
     },
   ];
   

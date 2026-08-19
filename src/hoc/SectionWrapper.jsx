@@ -10,7 +10,11 @@ const SectionWrapper = (Component, idName) =>
             variants={staggerContainer()}
             initial="hidden"
             whileInView="show"
-            viewport={{once:true, amount:0.25}}
+            // `amount: "some"` (any pixel visible) rather than a fraction:
+            // a fractional threshold can never be met once a section grows
+            // taller than viewport/amount, which silently left tall sections
+            // stuck at opacity 0 on mobile.
+            viewport={{once:true, amount:"some"}}
             className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
             >
                 <span className="hash-span" id={idName}>

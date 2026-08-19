@@ -32,7 +32,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a software developer with a BSc in Computer Science from Loyola College and 3 years of experience in front-end development and AI-driven low-code platforms. I've built innovative projects like a metaverse banking app and dynamic content modules. Now, I’m pursuing my MSCS at Northeastern University (Fall 2025), focusing on AI, XR, and immersive tech.
+        I'm a software developer with a BSc in Computer Science from Loyola College and 3 years at Intellect Design Arena, where I built an AI-powered Canvas chatbot on Amazon Bedrock that cut app configuration time in half, shipped a low-code content module used across web and mobile, and led a VR banking proof of concept in Babylon.js and Blender. I'm now pursuing my MS in Computer Science at Northeastern University in San Jose (graduating May 2027), working across multimodal machine learning, cross-platform mobile, and immersive tech.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service,index)=>(
