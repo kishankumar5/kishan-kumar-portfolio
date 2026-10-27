@@ -102,10 +102,10 @@ import {
       name: "JavaScript",
       icon: javascript,
     },
-    // {
-    //   name: "TypeScript",
-    //   icon: typescript,
-    // },
+    {
+      name: "TypeScript",
+      icon: typescript,
+    },
     {
       name: "React JS",
       icon: reactjs,
@@ -142,8 +142,11 @@ import {
       name: "docker",
       icon: docker,
     },
-    // No icon assets yet for: Python, PyTorch, React Native / Expo,
-    // PostgreSQL, Express, Java, jQuery, Babylon.js, Streamlit, Blender.
+    // This section renders each entry as a 3D icon ball, so an entry needs an
+    // icon file — there is no text-only form. No icon assets yet for:
+    // Next.js, Supabase, Stripe, Vercel, GitHub Actions, Zod, Resend, pg_cron,
+    // Python, PyTorch, React Native / Expo, PostgreSQL, Express, Java, jQuery,
+    // Babylon.js, Streamlit, Blender.
     // Drop a PNG/SVG in src/assets/tech, export it from src/assets/index.js,
     // and add an entry here to surface them.
   ];
@@ -224,6 +227,28 @@ import {
   // `source_code_link` and `live_demo_link` are optional — each link button is
   // hidden when its URL is absent.
   const projects = [
+    {
+      name: "Loan Repayment Processor",
+      date: "October 2026",
+      description:
+        "Full-stack fintech payments system that holds a card payment in a cancellable two-minute window using Stripe manual capture, then captures it from a pg_cron background job. One payment state machine is enforced twice — in TypeScript and again in a Postgres trigger — with idempotency keys at every layer (browser, API, Stripe, webhooks, email), so five concurrent submissions produce exactly one payment. Cancel-versus-capture races are resolved with row-level locking (FOR UPDATE / SKIP LOCKED) and in-flight statuses committed before any Stripe call: ten live boundary races each produced exactly one winner, matching Stripe. Webhooks are signature-verified and safe to process out of order, receipts send exactly once through a transactional outbox, and payer emails are encrypted with AES-256-GCM. Covered by 276 unit tests in GitHub Actions CI plus 50 database tests. Built with Next.js, TypeScript, and Supabase Postgres, deployed on Vercel.",
+      tags: [
+        {
+          name: "nextjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "stripe",
+          color: "green-text-gradient",
+        },
+        {
+          name: "postgresql",
+          color: "pink-text-gradient",
+        },
+      ],
+      slug: "loan",
+      source_code_link: "",
+    },
     {
       name: "ReuseDepot — iPad Kiosk App",
       date: "August 2026",
